@@ -1,0 +1,522 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+footer {
+    display: block;
+    height: 25px;
+    background: #555;
+    text-align: center;
+    color: #ccc;
+    font-size: 10px;
+    line-height: 25px;
+    width: 100%;
+}
+
+.cursive-1 {
+    font-family: 'Alex Brush', cursive;
+}
+
+h3.cursive-1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+/*  SITE STYLES */
+
+.big-picture-container {
+    background: url(../images/shawn-beth-main.jpg) no-repeat center top fixed;
+    height: 600px;
+    background-size: cover;
+    opacity: .8;
+}
+
+.navbar-default {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, .2);
+    border-color: transparent;
+    background-image: none;
+}
+
+.navbar-toggle {
+    background-color: #fff;
+}
+
+.social-container {
+    background-color: rgba(167, 156, 173, .8);
+    display: table;
+    min-height: 200px;
+    clear: both;
+    width: 100%;
+    border: 2px solid rgb(167, 156, 173);
+}
+
+.wedding-party {
+    display: table;
+    min-height: 200px;
+    clear: both;
+    width: 100%;
+    background-color: rgba(239, 237, 237, 0.28);
+    margin: 0 auto;
+    color: #666;
+    border-top: 2px solid #eee;
+}
+
+.wedding-party h3 {
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.wedding-party div.content-area {
+    max-width: 800px !important;
+    padding: 0 10px;
+}
+
+.bridesmaids, .groomsmen {
+    width: 50%;
+}
+
+.bridesmaids {
+    float: left;
+    text-align: left;
+}
+
+.groomsmen {
+    float: right;
+    text-align: right;
+}
+
+.bridesmaids ul > li, .groomsmen ul > li {
+    margin: 5px 0;
+}
+
+.main-info {
+    background-color: ghostwhite;
+    height: 400px;
+    width: 100%;
+    border-top: 2px solid rgb(236, 236, 245);
+}
+
+.main-quote {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.main-quote div.headline {
+    margin-top: 10px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.content-area {
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.small-number {
+    font-size: .7em;
+}
+
+.venue-info {
+    float: left;
+    display: block;
+    width: 50%;
+    padding: 20px;
+    font-size: 1.2em;
+    min-height: 400px;
+}
+
+.venue-info div {
+    margin: 15px 0;
+}
+
+.venue-info h1 {
+    text-shadow: 1px 1px 2px #bbb;
+}
+
+.map {
+    float: right;
+    width: 50%;
+    display: block;
+    height: 400px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.social-info {
+    padding: 10px 5px;
+    float: right;
+    width: 50%;
+    display: block;
+}
+
+.social-content {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.social-content img {
+    margin: 10px;
+    border-radius: 5px;
+    width: 95%;
+    text-align: center;
+}
+
+.social-info h3, .social-info h2, .social-info h1 {
+    color: white !important;
+    text-shadow: 1px 1px 1px #5C5C5C;
+}
+
+.hashtag {
+    font-family: 'Alex Brush';
+    color: white;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #5C5C5C;
+}
+
+.effect7 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect7:before, .effect7:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect7:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+ul.list-inline {
+    width: 100%;
+    margin: 10px 0 !important;
+}
+
+.content {
+    text-align: center;
+}
+
+ul.list-inline {
+    display: inline-block;
+    width: 100%;
+}
+
+.image img {
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.profile-image {
+    width: 30px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 10px #999;
+    box-shadow: 0 0 10px #999;
+    margin: 0 15px 0 5px;
+}
+
+.detail-panel {
+    text-align: left;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    box-shadow: 0 0 5px #ccc;
+    white-space: normal;
+    padding: 5px;
+    background-color: white;
+    white-space: nowrap;
+}
+
+.user-detail {
+    margin: 5px 0;
+}
+
+.registry {
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #eee;
+    border-radius: 4px;
+    height: 80px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 50px;
+}
+
+.registry-link {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.registry-link img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.image,
+.detail-panel,
+.image img {
+    width: 100%;
+    max-width: 480px;
+}
+
+ul.list-inline li {
+    width: 20%;
+}
+
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('MonoSocialIconsFont-1.10.eot');
+    src: url('MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+    url('MonoSocialIconsFont-1.10.woff') format('woff'),
+    url('MonoSocialIconsFont-1.10.ttf') format('truetype'),
+    url('MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    line-height: .8;
+    content: attr(title);
+    margin-top: .3em;
+    font-size: 300%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .venue-info, .social-content, .social-info {
+        width: 100%;
+        float: none;
+    }
+
+    h3.cursive-1 {
+        line-height: .5;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .social-content, .social-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .venue-info {
+        padding: 10px;
+        text-align: center;
+        font-size: 1.1em;
+        min-height: 0px;
+    }
+
+    .registry {
+        width: 160px;
+        height: 70px;
+        line-height: 40px;
+    }
+
+    .social-info {
+        padding-top: 0 !important;
+    }
+
+    .map, .map iframe {
+        height: 250px;
+    }
+
+    .main-quote h3 {
+        width: 80%;
+    }
+
+    .main-info {
+        height: inherit;
+    }
+
+    .big-picture-container {
+        height: 300px;
+        background: url(../images/shawn-beth-main-xsmall.jpg) no-repeat center top fixed;
+    }
+
+    .image,
+    .image img,
+    .detail-panel {
+        width: 100%;
+    }
+
+    ul.list-inline {
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+
+    ul.list-inline li {
+        width: 33%;
+    }
+
+    .display-for-large-screens {
+        display: none;
+    }
+
+    .image-caption-low,
+    .image-caption-full {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 736px) {
+    .venue-info, .social-content, .social-info {
+         width: 100%;
+         float: none;
+     }
+
+    .map {
+        width: 100%;
+    }
+
+    h3.cursive-1 {
+        line-height: .5;
+    }
+
+    .map, .map iframe {
+        height: 250px;
+    }
+
+    .venue-info, .social-content, .social-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .venue-info {
+        min-height: 0px;
+    }
+
+    .main-info {
+        height: inherit;
+    }
+
+    .social-info {
+        padding-top: 0 !important;
+    }
+
+    .main-quote h3 {
+        width: 80%;
+    }
+
+    .big-picture-container {
+        height: 400px;
+        background: url(../images/shawn-beth-main-small.jpg) no-repeat center top fixed;
+    }
+
+    .image,
+    .detail-panel,
+    .image img {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    ul.list-inline {
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+
+    ul.list-inline li {
+        width: 25%;
+    }
+
+    .display-for-large-screens {
+        display: none;
+    }
+}
+
+@media (min-width: 737px) and (max-width: 1001px) {
+
+    .image,
+    .detail-panel,
+    .image img {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    ul.list-inline li {
+        width: 20%;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+    .big-picture-container {
+        height: 700px;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .big-picture-container {
+        height: 400px;
+        background: url(../images/shawn-beth-main-small.jpg) no-repeat center top fixed;
+    }
+}
