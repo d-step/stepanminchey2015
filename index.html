@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Allura|Alex+Brush' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="scripts/jquery.countdown.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="styles/main.css" rel="stylesheet">
 </head>
@@ -49,6 +50,8 @@
         <div class="headline">Shawn & Beth</div>
         <h5 class="subtitle">May Thirtieth Two Thousand Fifteen</h5>
         <h5 class="subtitle">Six o'clock PM</h5>
+
+        <div id="counter" class="subtitle"></div>
     </section>
 </section>
 
@@ -56,19 +59,31 @@
     <div class="content-area">
         <div class="venue-info">
             <div>
-                <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
-                Registered at<br>
-                <div class="registry">
-                    <a target="_blank" class="registry-link"
-                       href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542090662&pwsurl=">
-                        <img src="images/bedbath.png" alt="Bed Bath and Beyond"/>
-                    </a>
+                <div><span class="glyphicon glyphicon-map-marker"></span>
+                    Savannah's Meadow
+                </div>
+                <div><span class="glyphicon glyphicon-cutlery"></span>
+                    Reception to follow
+                </div>
+                <div><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
+                    Registered at<br>
+
+                    <div class="registry">
+                        <a target="_blank" class="registry-link"
+                           href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=542090662&pwsurl=">
+                            <img src="images/bedbath.png" alt="Bed Bath and Beyond"/>
+                        </a>
                     </div>
-                <div class="registry">
-                    <a target="_blank" class="registry-link"
-                       href="http://www.target.com/gift-registry/giftgiver?registryId=-4SlKytTonyqg0hBwwJsyA&registryType=WEDDING">
-                        <img src="images/target.png" alt="Target"/>
-                    </a>
+                    <div class="registry">
+                        <a target="_blank" class="registry-link"
+                           href="http://www.target.com/gift-registry/giftgiver?registryId=-4SlKytTonyqg0hBwwJsyA&registryType=WEDDING">
+                            <img src="images/target.png" alt="Target"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="rsvp">
+                    <input type="text" id="rsvp-name" class="form-control" placeholder="Enter your name...">
+                    <button id="rsvp" type="button" class="btn btn-default btn-lg">RSVP</button>
                 </div>
             </div>
         </div>

@@ -151,6 +151,7 @@ h3.cursive-1 {
     padding: 20px;
     font-size: 1.2em;
     min-height: 400px;
+    overflow: hidden;
 }
 
 .venue-info div {
@@ -314,6 +315,37 @@ ul.list-inline li {
     width: 20%;
 }
 
+#rsvp {
+    background-image: none;
+    background-color: rgba(167, 156, 173, .8);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    float: left;
+    width: 18%;
+}
+
+#rsvp:hover {
+    background-image: none;
+    background-color: rgba(167, 156, 173, 1.0);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+}
+
+#rsvp-name {
+    float: left;
+    width: 82%;
+    height: 47px;
+    margin-right: 10px;
+}
+
+.rsvp {
+    margin: 0 auto;
+    overflow: hidden;
+    display: inline-flex;
+    width: 100%;
+}
+
 @font-face {
     font-family: 'Mono Social Icons Font';
     src: url('MonoSocialIconsFont-1.10.eot');
@@ -398,6 +430,14 @@ a.symbol:before {
     .big-picture-container {
         height: 300px;
         background: url(../images/shawn-beth-main-xsmall.jpg) no-repeat center top fixed;
+    }
+
+    #rsvp {
+        width: 30%;
+    }
+
+    #rsvp-name {
+        width: 67%;
     }
 
     .image,
@@ -488,6 +528,14 @@ a.symbol:before {
 
     .display-for-large-screens {
         display: none;
+    }
+
+    #rsvp {
+        width: 20%;
+    }
+
+    #rsvp-name {
+        width: 78.25%;
     }
 }
 
