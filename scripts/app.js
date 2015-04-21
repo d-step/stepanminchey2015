@@ -10,7 +10,7 @@
 
             fetchPopular: function (callback) {
 
-                var endpoint = 'https://api.instagram.com/v1/tags/stepanmincheywedding/media/recent?client_id=' + client_id + '&callback=JSON_CALLBACK&count=1000';
+                var endpoint = 'https://api.instagram.com/v1/tags/stepanminchey2015/media/recent?client_id=' + client_id + '&callback=JSON_CALLBACK&count=1000';
 
                 $http.jsonp(endpoint).success(function (response) {
 
@@ -36,14 +36,61 @@
 
 })();
 
-var delay = (function () {
+$(function () {
+    $('#counter').countdown({
+        date: new Date('05/30/15 19:00:00')
+    });
+});
 
-    var timer = 0;
+$(document).ready(
+    function () {
+        $('#rsvp').click(function () {
 
-    return function (callback, ms) {
-        clearTimeout(timer);
+            var name = $('#rsvp-name').val();
 
-        timer = setTimeout(callback, ms);
-    };
+            // Send values to server
+            $.ajax(
+                {
+                    type: 'POST',
+                    url: 'rsvp.php',
+                    data: {
+                        name: name
+                    },
+                    success: function (data) {
+                        alert(name);
+                    },
+                    error: function (data) {
+                        alert('boo');
+                    }
+                }
+            );
 
-})();
+        });
+
+        $('#open-rsvp').click(function () {
+
+            // build the modal window
+            var background = $('<div class="rsvp-modal-background"></div>');
+            var content = $('<div class="rsvp-modal-content"><div class="header"><h3>RSVP</h3></div></div>');
+            var name = $('<input type="text" id="rsvp-name" class="form-control rsvp-input" placeholder="Enter your name...">');
+            var email = $('<input type="text" id="rsvp-name" class="form-control rsvp-input" placeholder="Email">');
+            var rsvpButton = $('<div><button id="rsvp" type="button" class="btn btn-default btn-lg">RSVP</button></div>');
+            var cancel = $('<div class="rsvp-modal-cancel"><span id="cancel">CANCEL</span></div>');
+
+            $(content).append(name);
+            $(content).append(email);
+            $(content).append(rsvpButton);
+            $(content).append(cancel);
+            $(background).append(content);
+
+            $('body').append(background);
+
+        });
+
+        $(document).on('click', '#cancel', function () {
+
+            $('.rsvp-modal-background').remove();
+
+        });
+    }
+);

@@ -315,35 +315,97 @@ ul.list-inline li {
     width: 20%;
 }
 
+#open-rsvp {
+    background-image: none;
+    background-color: rgba(167, 156, 173, .8);
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    border-radius: 4px;
+}
+
 #rsvp {
     background-image: none;
     background-color: rgba(167, 156, 173, .8);
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
     border-radius: 4px;
-    float: left;
-    width: 18%;
+    width: 100%;
 }
 
-#rsvp:hover {
+#rsvp:hover, #open-rsvp:hover, #rsvp:active, #open-rsvp:active {
     background-image: none;
     background-color: rgba(167, 156, 173, 1.0);
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
 }
 
+#rsvp:active, #open-rsvp:active {
+    color: lightgray !important;
+}
+
 #rsvp-name {
-    float: left;
-    width: 82%;
+    width: 100%;
     height: 47px;
-    margin-right: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 14px;
 }
 
 .rsvp {
     margin: 0 auto;
     overflow: hidden;
-    display: inline-flex;
     width: 100%;
+}
+
+.rsvp-input {
+    margin-bottom: 10px;
+}
+
+.rsvp-modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1000;
+    display: block;
+    overflow: hidden;
+    padding: 25% 0 0 0;
+}
+
+.rsvp-modal-content {
+    margin: 0 auto;
+    width: 300px;
+    display: block;
+    background-color: rgb(232, 232, 232);
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.rsvp-modal-content .header {
+
+    color: #777;
+    text-shadow: 0 -1px 0 #eee;
+
+}
+
+.rsvp-modal-cancel {
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    color: #777;
+}
+
+#cancel {
+    cursor: pointer;
+}
+
+#cancel:hover, #cancel:active {
+    color: #333;
 }
 
 @font-face {
@@ -430,14 +492,6 @@ a.symbol:before {
     .big-picture-container {
         height: 300px;
         background: url(../images/shawn-beth-main-xsmall.jpg) no-repeat center top fixed;
-    }
-
-    #rsvp {
-        width: 30%;
-    }
-
-    #rsvp-name {
-        width: 67%;
     }
 
     .image,
@@ -529,17 +583,37 @@ a.symbol:before {
     .display-for-large-screens {
         display: none;
     }
+}
 
-    #rsvp {
-        width: 20%;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .venue-info {
+        min-height: 0px;
     }
 
-    #rsvp-name {
-        width: 78.25%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    .venue-info {
+        min-height: 0px;
     }
+
+    .registry {
+        width: 160px;
+        height: 70px;
+        line-height: 40px;
+    }
+
 }
 
 @media (min-width: 737px) and (max-width: 1001px) {
+
+    .registry {
+        width: 180px;
+        height: 70px;
+        line-height: 40px;
+    }
 
     .image,
     .detail-panel,
@@ -550,6 +624,16 @@ a.symbol:before {
 
     ul.list-inline li {
         width: 20%;
+    }
+
+}
+
+@media (min-width: 737px) and (max-width: 892px) {
+
+    .registry {
+        width: 160px;
+        height: 70px;
+        line-height: 40px;
     }
 
 }

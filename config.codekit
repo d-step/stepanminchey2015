@@ -140,6 +140,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/scripts\/jquery.countdown.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scripts\/jquery.countdown.min.js",
+		"outputAbbreviatedPath": "\/scripts\/min\/jquery.countdown.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/styles\/main.css": {
 		"fileType": 16,
 		"ignore": 0,
