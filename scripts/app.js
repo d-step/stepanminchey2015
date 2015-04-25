@@ -44,41 +44,81 @@ $(function () {
 
 $(document).ready(
     function () {
-        $('#rsvp').click(function () {
+        $(document).on('click', '#rsvp', function () {
 
             var name = $('#rsvp-name').val();
+            var email = $('#rsvp-email').val();
+            var guests = $('#rsvp-guests').val();
 
-            // Send values to server
-            $.ajax(
-                {
-                    type: 'POST',
-                    url: 'rsvp.php',
-                    data: {
-                        name: name
-                    },
-                    success: function (data) {
-                        alert(name);
-                    },
-                    error: function (data) {
-                        alert('boo');
+            var missingName = false;
+            var missingGuests = false;
+
+            if (name === '') {
+                missingName = true;
+
+                // highlight input
+                $('#rsvp-name').attr('style', 'border: 2px solid red');
+            }
+
+            if (email === '') {
+                email = undefined;
+            }
+
+            if (guests === '') {
+                missingGuests = true;
+
+                // highlight input
+                $('#rsvp-guests').attr('style', 'border: 2px solid red');
+            }
+
+            if (!missingName && !missingGuests) {
+                // Send values to server
+                $.ajax(
+                    {
+                        type: 'POST',
+                        url: 'rsvp.php',
+                        data: {
+                            name: name,
+                            email: email,
+                            guests: guests
+                        },
+                        success: function (data) {
+                            $('.rsvp-modal-background').remove();
+
+                            var success = $('<div class="alert alert-success message" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;' + data + '</div>');
+
+                            $('body').append(success);
+
+                            setTimeout(function () {
+                                $('.alert.message').remove();
+                            }, 3000);
+                        },
+                        error: function (data) {
+                            $('.alert.error').remove();
+
+                            var errors = $('<div class="alert alert-danger error" role="alert"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>&nbsp;' + data + '</div>');
+
+                            $('#errors').append(errors);
+                        }
                     }
-                }
-            );
-
+                );
+            }
         });
 
         $('#open-rsvp').click(function () {
 
             // build the modal window
             var background = $('<div class="rsvp-modal-background"></div>');
-            var content = $('<div class="rsvp-modal-content"><div class="header"><h3>RSVP</h3></div></div>');
+            var content = $('<div class="rsvp-modal-content"><div id="errors"></div><div class="header"><h3>RSVP</h3></div></div>');
             var name = $('<input type="text" id="rsvp-name" class="form-control rsvp-input" placeholder="Enter your name...">');
-            var email = $('<input type="text" id="rsvp-name" class="form-control rsvp-input" placeholder="Email">');
+            var email = $('<input type="text" id="rsvp-email" class="form-control rsvp-input" placeholder="Email (optional)">');
             var rsvpButton = $('<div><button id="rsvp" type="button" class="btn btn-default btn-lg">RSVP</button></div>');
             var cancel = $('<div class="rsvp-modal-cancel"><span id="cancel">CANCEL</span></div>');
+            var guestSelect = $('<select id="rsvp-guests" class="form-control rsvp-input"><option value="">Number of Guests</option></option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select>');
 
             $(content).append(name);
             $(content).append(email);
+            $(content).append(guestSelect);
             $(content).append(rsvpButton);
             $(content).append(cancel);
             $(background).append(content);
