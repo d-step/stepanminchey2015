@@ -44,6 +44,11 @@ $(function () {
 
 $(document).ready(
     function () {
+
+        $('#song-search').keyup(function() {
+            alert('foo');
+        });
+
         $(document).on('click', '#rsvp', function () {
 
             var name = $('#rsvp-name').val();

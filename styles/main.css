@@ -451,6 +451,12 @@ a.symbol:before {
     font-size: 300%;
 }
 
+.request-content {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .venue-info, .social-content, .social-info {
         width: 100%;
