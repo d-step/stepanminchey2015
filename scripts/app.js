@@ -46,7 +46,7 @@ $(document).ready(
     function () {
 
         $('#song-search').keyup(function() {
-            alert('foo');
+            $.ajax({});
         });
 
         $(document).on('click', '#rsvp', function () {
